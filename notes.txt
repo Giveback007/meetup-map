@@ -1,0 +1,4 @@
+[Creating Icons For PWA]
+- https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7
+- https://realfavicongenerator.net/
+- https://www.pwabuilder.com/imageGenerator

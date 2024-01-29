@@ -1,0 +1,27 @@
+{
+  "name": "meetup-map",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && workbox generateSW workbox-config.cjs",
+    "preview": "pnpm build && vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.2",
+    "@tsconfig/svelte": "^5.0.2",
+    "pwa-asset-generator": "^6.3.1",
+    "svelte": "^4.2.9",
+    "svelte-check": "^3.6.3",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "workbox-cli": "^7.0.0"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "workbox-window": "^7.0.0"
+  }
+}
