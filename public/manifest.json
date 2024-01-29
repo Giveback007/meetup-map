@@ -10,6 +10,10 @@
     "permissions": [
       "storage"
     ],
+    "related_applications": [{
+      "platform": "webapp",
+      "url": "https://app.example.com/manifest.json"
+    }],
     "icons": [
       {
         "src": "icons/icon-192.png",

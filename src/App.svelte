@@ -1,10 +1,17 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from './assets/favicon.svg'
-  import Counter from './lib/Counter.svelte'
+  import svelteLogo from './assets/svelte.svg';
+  import viteLogo from './assets/favicon.svg';
+  import Counter from './lib/Counter.svelte';
+  import { pwaIsReadyToInstall } from './store';
+  
 </script>
 
 <main>
+  <!-- svelte-ignore missing-declaration -->
+  <button
+    disabled={!$pwaIsReadyToInstall}
+    on:click={() => pwa.installPrompt?.prompt()}
+  >Install</button>
   <div>
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
