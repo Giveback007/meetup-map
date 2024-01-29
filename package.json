@@ -5,19 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && workbox generateSW workbox-config.cjs",
+    "build": "vite build && tsx ./workbox-config.ts",
     "preview": "pnpm build && vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@tsconfig/svelte": "^5.0.2",
+    "@types/workbox-sw": "^4.3.7",
     "pwa-asset-generator": "^6.3.1",
     "svelte": "^4.2.9",
     "svelte-check": "^3.6.3",
     "tslib": "^2.6.2",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
+    "workbox-build": "^7.0.0",
     "workbox-cli": "^7.0.0"
   },
   "dependencies": {
