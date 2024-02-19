@@ -24,7 +24,9 @@
     "workbox-cli": "^7.0.0"
   },
   "dependencies": {
+    "graphql-request": "^6.1.0",
     "leaflet": "^1.9.4",
+    "normalize.css": "^8.0.1",
     "workbox-window": "^7.0.0"
   }
 }

@@ -12,6 +12,8 @@ dist
 dist-ssr
 dev-dist
 *.local
+key.ts
+key.js
 
 # Editor directories and files
 !.vscode/extensions.json

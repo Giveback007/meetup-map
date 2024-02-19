@@ -1,4 +1,5 @@
 import { Workbox } from 'workbox-window';
+import { key } from './key';
     
 {
     const isDev = import.meta.env.DEV;
@@ -17,6 +18,7 @@ import { Workbox } from 'workbox-window';
                 // 127.0.0.0/8 are considered localhost for IPv4.
                 window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
             ),
+            ...key
         },
         pwa: {
             isStandalone: () =>
@@ -34,8 +36,10 @@ import { Workbox } from 'workbox-window';
     Object.assign(globalThis, globals);
 
     // -- PWA -- //
-    // env === 'prod' &&
-    if ("serviceWorker" in navigator) {
+    if (
+        isProd &&
+        "serviceWorker" in navigator
+    ) {
         const wb = new Workbox('sw.js');
 
         wb.addEventListener('activated', event => {
